@@ -28,7 +28,7 @@ A professional, modular scientific calculator built in Python and Tkinter — pa
 - 🎨 Themes: Light/Dark mode toggle (`q`)  
 - 🖥️ Responsive UI: Dynamic layout & font resizing  
 - ⌨️ Keyboard First: Full hotkey support  
-- 📐 Rad/Deg Toggle: Angle unit switching (`r`)  
+- 📐 Rad/Deg Toggle: Angle unit switching (`R`)  
 - 📦 Standalone Executable: No Python install required  
 
 ---
