@@ -1,118 +1,130 @@
-HK Scientific Calculator
+# HK Scientific Calculator
 A professional, modular scientific calculator built in Python and Tkinter — packaged as a standalone executable with custom theming and extensive functionality.
 
-🎯 Table of Contents
-Features
+---
 
-Screenshots
+## 🎯 Table of Contents
 
-Installation & Usage
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Installation & Usage](#-installation--usage)
+- [Keyboard Shortcuts](#-keyboard-shortcuts)
+- [Advanced Usage](#-advanced-usage)
+- [Building from Source](#-building-from-source)
+- [Troubleshooting](#-troubleshooting)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-Keyboard Shortcuts
+---
 
-Advanced Usage
+## ⭐ Features
 
-Building from Source
+- 🧮 Scientific & Mathematical: `sin`, `cos`, `tan`, `log`, `ln`, `√`, `xⁿ`, `π`, `e`, `!`, and more  
+- 🔄 Dual Function Modes: Switch primary/secondary functions with the `2nd` button  
+- 💾 Memory Operations: `M+`, `M-`, `MR`, `MC`, with on-screen indicator  
+- 📜 History Panel: View and reuse past calculations  
+- 🧠 Smart Input: Auto-parentheses and syntax validation  
+- 🎨 Themes: Light/Dark mode toggle (`q`)  
+- 🖥️ Responsive UI: Dynamic layout & font resizing  
+- ⌨️ Keyboard First: Full hotkey support  
+- 📐 Rad/Deg Toggle: Angle unit switching (`r`)  
+- 📦 Standalone Executable: No Python install required  
 
-Troubleshooting
+---
 
-Project Structure
+## 🖼️ Screenshots
 
-Contributing
+![Dark Mode Default](docs/dark_mode_default_view.png)
+![Dark Mode + History](docs/dark_mode_history_panel.png)
+![Light Mode + History](docs/light_mode_history_panel.png)
 
-License
+---
 
-⭐ Features
-🧮 Scientific & Mathematical: sin, cos, tan, log, ln, √, xⁿ, π, e, !, and more
+## 💾 Installation & Usage
 
-🔄 Dual Function Modes: Switch primary/secondary functions with the 2nd button
+### 🪟 Windows (Executable)
 
-💾 Memory Operations: M+, M-, MR, MC, with on-screen indicator
+1. Download `HK_Calculator.exe` from [Releases](https://github.com/alihk1684/HK_Calculator/releases)  
+2. Double-click to run — no installation required
 
-📜 History Panel: View and reuse past calculations
+---
 
-🧠 Smart Input: Auto-parentheses and syntax validation
+## 🐍 Run from Source
 
-🎨 Themes: Light/Dark mode toggle (q)
-
-🖥️ Responsive UI: Dynamic layout & font resizing
-
-⌨️ Keyboard First: Full hotkey support for operators, functions, theme, and history
-
-📐 Rad/Deg Toggle: Angle unit switching (R)
-
-📦 Standalone Executable: No Python install required
-
-🖼️ Screenshots
-Dark Mode Default	Dark Mode + History	Light Mode + History
-
-💾 Installation & Usage
-🪟 Windows (Executable)
-Download HK_Calculator.exe from Releases
-
-Double-click to run — no installation required
-
-🐍 Run from Source
-bash
-Copy code
+```bash
 git clone https://github.com/yourusername/HK_Calculator.git
 cd HK_Calculator
 pip install -r requirements.txt  # If applicable
 python src/main.py
-⌨️ Keyboard Shortcuts
-Key	Action
-0–9, .	Input digits/decimal
-+ - * /	Basic operations
-Enter / =	Compute result
-Backspace	Delete character
-Esc	Clear all (AC)
-2nd	Toggle 2ⁿᵈ functions
-r	Radians / Degrees
-q	Toggle theme
-h	Toggle history panel
+```
+---
+
+## ⌨️ Keyboard Shortcuts
+| Key        | Action                  |
+|------------|--------------------------|
+| 0–9, `.`   | Input digits/decimal     |
+| `+ - * /`  | Basic operations         |
+| `Enter` / `=` | Compute result        |
+| `Backspace` | Delete character       |
+| `Esc`      | Clear all (AC)           |
+| `2nd`      | Toggle 2ⁿᵈ functions     |
+| `r`        | Radians / Degrees        |
+| `q`        | Toggle theme             |
+| `h`        | Toggle history panel     |
 
 Function Shortcuts:
 
-Key	Primary	2ⁿᵈ Function
-s	sin(	sinh(
-c	cos(	cosh(
-t	tan(	tanh(
-g	log(	logy(
-l	ln(	(
-x	x²	x³
-!	factorial	1/x
+| Key | Primary Function | Key | 2ⁿᵈ Function |
+|-----|------------------|-----|--------------|
+| `s` | sin(             | `S` | sinh(        |
+| `c` | cos(             | `C` | cosh(        |
+| `t` | tan(             | `T` | tanh(        |
+| `g` | log(             | `G` | logy(        |
+| `l` | ln(              | `(` | (            |
+| `x` | x²               | `X` | x³           |
 
-🚀 Advanced Usage
-🖱️ Click History to Reuse
+and more, press H to see hot keys.
 
-📋 Right-Click Result to Copy
+---
 
-🎨 Customize Themes in yi_config.py
+## 🚀 Advanced Usage
 
-💡 Enable Persistent History by modifying logic.py
+- 🖱️ Click a history item to reuse its expression
+- 📋 Right-click on the result to copy it to clipboard
+- 🎨 Customize themes in `yi_config.py`
+- 💡 Enable persistent history by modifying `logic.py`
 
-🛠️ Building from Source
-bash
-Copy code
+---
+
+## 🛠️ Building from Source
+
+```bash
 pyinstaller --noconfirm --onefile --windowed ^
   --name=HK_Calculator ^
   --icon=docs/HK.ico ^
   --add-data "docs/HK_png.png;docs" ^
   src/main.py
-🗃️ Output: dist/HK_Calculator.exe
+```
+- 🗃️ Output: dist/HK_Calculator.exe
+- 🧹 Cleanup: Delete build/, dist/, *.spec if desired
 
-🧹 Cleanup: Delete build/, dist/, *.spec if desired
+---
 
-⚠️ Troubleshooting
-Issue	Solution
-iconphoto() error	Ensure it's called right after Tk() creation
-Missing images	Use resource_path() for packaging compatibility
-Missing modules	Reinstall dependencies: pip install -r requirements.txt (if any)
-Broken EXE	Confirm all paths are relative; rebuild with correct --add-data paths
+## ⚠️ Troubleshooting
 
-📁 Project Structure
-css
-Copy code
+| Issue |	Solution |
+|-------|----------|
+| iconphoto() error |	Ensure it's called right after Tk() creation |
+| Missing images | Use resource_path() for packaging compatibility |
+| Missing modules |	Run: pip install -r requirements.txt (if you use one) |
+| Broken EXE | Make sure paths are relative and correct in --add-data; rebuild EXE |
+
+---
+
+##📁 Project Structure
+
+```css
 HK_Calculator/
 ├── docs/
 │   ├── HK.ico
@@ -125,23 +137,26 @@ HK_Calculator/
 │   └── yi_config.py
 ├── HK_Calculator.exe
 └── README.md
+```
 
-👤 Author
+---
+
+## 👤 Author
 Ali Heidari Khezri
 Electrical Engineering student @ K.N. Toosi University of Technology
 💡 Passionate about programming, automation, and creating useful tools
 
-🤝 Contributing
-Pull requests welcome!
+---
 
-Fork this repo
+## 🤝 Contributing
 
-Create a new feature branch
+- Pull requests welcome!
+- Fork this repo
+- Create a new feature branch
+- Commit your changes
+- Open a pull request
 
-Commit your changes
+---
 
-Open a pull request
-
-📝 License
+## 📝 License
 This project is licensed under the MIT License.
-See LICENSE file for details.
