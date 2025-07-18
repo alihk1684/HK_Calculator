@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller
+#  Build and dist folders
+build/
+dist/
+*.spec
+
+# Executable
+HK_Calculator.exe
+
+# Environment files
+.venv/
+env/
+venv/
+*.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+
+# IDE/project files
+.vscode/
+.idea/
+*.swp
