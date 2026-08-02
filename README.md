@@ -142,9 +142,7 @@ HK_Calculator/
 ---
 
 ## 👤 Author
-Ali Heidari Khezri
-Electrical Engineering student @ K.N. Toosi University of Technology
-💡 Passionate about programming, automation, and creating useful tools
+Ali Heidari
 
 ---
 
